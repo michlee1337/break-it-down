@@ -19,4 +19,14 @@ class GuidesController < ApplicationController
 
   def index
   end
+
+  private
+
+  def guide_params
+    params.require(:guide).permit(:title, :description,
+      chunk_attributes: [:id, :_destroy, :title, :description,
+        blocks_attributes: [:id, :_destroy, :name, :description]
+      ])
+  end
+
 end
