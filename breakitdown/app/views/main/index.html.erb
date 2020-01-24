@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <div>
+      <a href="#">Login</a>
+    </div>
+
+    <div>
+      <h1>Hi! What do you want to do today?</h1>
+    </div>
+
+    <div>
+      <div>
+        <%= link_to "Make a Guide", { :controller => :guides, :action => :new }, { class: ""} %>
+      </div>
+      <div>
+        <a href="#">Use a Guide</a>
+        <%# link_to "Use a Guide", { :controller => :guides, :action => :index }, { class: ""} %>
+      </div>
+    </div>
+  </body>
+</html>

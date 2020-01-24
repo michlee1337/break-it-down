@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  desctiption: MyString
+  mastery: 1
+  chunk: one
+
+two:
+  title: MyString
+  desctiption: MyString
+  mastery: 1
+  chunk: two
