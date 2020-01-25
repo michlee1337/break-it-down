@@ -8,6 +8,30 @@
       <h1>Create a Guide</h1>
       <p>note to self: add tool-tips later</p>
     </div>
-    
+    <div>
+      <%= form_for @guide do |f| %>
+        <div class="field">
+          <%= f.label :title %>
+          <br/>
+          <%= f.text_field :title %>
+        </div>
+        <div class="field">
+          <%= f.label :description %>
+          <br/>
+          <%= f.text_field :description %>
+        </div>
+        <h3>Chunks</h3>
+        <div id='chunks'>
+          <%= f.fields_for :chunks do |chunk| %>
+            <%= render 'chunk_fields', :f => chunk %>
+          <% end %>
+          <div class='links'>
+            <%= link_to_add_association 'add chunk', f, :chunks %>
+          </div>
+        </div>
+        <%= f.submit 'Save' %>
+      <% end %>
+    </div>
+
   </body>
 </html>

@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_24_163726) do
+ActiveRecord::Schema.define(version: 2020_01_24_235158) do
 
   create_table "blocks", force: :cascade do |t|
     t.string "title"
-    t.string "desctiption"
+    t.string "description"
     t.integer "mastery"
     t.integer "chunk_id"
     t.datetime "created_at", null: false

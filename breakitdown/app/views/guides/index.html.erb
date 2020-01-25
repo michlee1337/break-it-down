@@ -1,2 +1,10 @@
-<h1>Guides#index</h1>
-<p>Find me in app/views/guides/index.html.erb</p>
+<h1>Guides Index</h1>
+<p> Find a study guide that suits your needs </p>
+<% @guides.each do |guide| %>
+  <%= link_to guide_path(guide.id) do %>
+    <div>
+      <h2><%= guide.title %></h2>
+      <p><%= guide.description %></p>
+    </div>
+  <% end %>
+<% end %>

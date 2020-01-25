@@ -1,0 +1,20 @@
+<div class='nested-fields'>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <%= link_to_remove_association "remove chunk", f %>
+  <div class='blocks'>
+    <%= f.fields_for :blocks do |block| %>
+      <%= render 'block_fields', :f => block %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'add block', f, :blocks %>
+    </div>
+
+  </div>
+</div>

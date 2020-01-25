@@ -6,8 +6,8 @@ ruby '2.5.4'
 #____ Custom Additions ____
 
 # dynamic nested form fields
-gem "cocoon"
-
+gem 'cocoon'
+gem 'jquery-rails'
 #__________________________
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

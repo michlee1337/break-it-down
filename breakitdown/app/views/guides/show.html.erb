@@ -1,2 +1,17 @@
-<h1>Guides#show</h1>
-<p>Find me in app/views/guides/show.html.erb</p>
+<h1><%= @guide.title %></h1>
+
+<p><%= @guide.description %></p>
+<p><%= @guide.chunks.count %></p>
+
+<% @guide.chunks.each do |chunk| %>
+  <div>
+    <h2><%= chunk.title %></h2>
+    <p><%= chunk.description %></p>
+      <% chunk.blocks.each do |block| %>
+        <div>
+          <strong><%= block.title %></strong>
+          <%= block.description %>
+        </div>
+      <% end %>
+  </div>
+<% end %>
