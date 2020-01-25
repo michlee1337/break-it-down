@@ -8,6 +8,9 @@ ruby '2.5.4'
 # dynamic nested form fields
 gem 'cocoon'
 gem 'jquery-rails'
+
+# icons
+gem "font-awesome-rails" 
 #__________________________
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -4,20 +4,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
   <body>
-    <div>
+    <div class="content-right">
       <a href="#">Login</a>
     </div>
 
-    <div>
-      <h1>Hi! What do you want to do today?</h1>
-    </div>
-
-    <div>
-      <div>
-        <%= link_to "Make a Guide", { :controller => :guides, :action => :new }, { class: ""} %>
+    <div class="oneline-content">
+      <div class="content-center">
+        <h1>Hi! What do you want to do today?</h1>
       </div>
-      <div>
-        <%= link_to "Use a Guide", { :controller => :guides, :action => :index }, { class: ""} %>
+
+      <div class="content-center">
+        <div class="btn-focus">
+          <%= link_to "Make a Guide", { :controller => :guides, :action => :new }, { class: ""} %>
+        </div>
+        <div class="btn-focus">
+          <%= link_to "Use a Guide", { :controller => :guides, :action => :index }, { class: ""} %>
+        </div>
       </div>
     </div>
   </body>

@@ -1,13 +1,15 @@
-<div class='nested-fields'>
+<div class='nested-fields chunk-fields'>
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, placeholder: "Title" %>
   </div>
   <div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, placeholder: "Introduction" %>
   </div>
-  <%= link_to_remove_association "remove chunk", f %>
+    <%= link_to_remove_association f do %>
+      <div class="modal-close">
+        <i class="fa fa-times"></i>
+      </div>
+    <% end %>
   <div class='blocks'>
     <%= f.fields_for :blocks do |block| %>
       <%= render 'block_fields', :f => block %>

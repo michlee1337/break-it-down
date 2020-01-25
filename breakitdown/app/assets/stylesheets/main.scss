@@ -1,3 +1,60 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+:root {
+    --main-color:#EBEDF2;
+    --text-color: #121D26;
+    --focus-color: #F2D129;
+    /*
+    --secondary-color: #F0D9F7;
+    --main-color-highlight: #7907FF;
+    */
+}
+
+@font-face {
+  font-family: santral;
+  src: url(santral-light-webfont.woff);
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(santral-light-webfont.woff);
+}
+
+
+body {
+  background-color: var(--main-color);
+  margin: 50px 100px;
+}
+
+h1,h2,p,a {
+  font-family: santral,'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+.oneline-content {
+  padding-top: 30%;
+}
+
+.content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.content-right {
+  float: right
+}
+
+.btn-focus {
+  background-color: var(--focus-color);
+  display: inline-block;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}

@@ -5,20 +5,17 @@
   </head>
   <body>
     <div>
-      <h1>Create a Guide</h1>
-      <p>note to self: add tool-tips later</p>
+      <h1>Create a Study Guide</h1>
+      <p>Break down the topic into fundamental concepts and skills.</p>
+      <p>Remember to chunk them up!</p>
     </div>
     <div>
       <%= form_for @guide do |f| %>
         <div class="field">
-          <%= f.label :title %>
-          <br/>
-          <%= f.text_field :title %>
+          <%= f.text_field :title, placeholder: "Topic"%>
         </div>
         <div class="field">
-          <%= f.label :description %>
-          <br/>
-          <%= f.text_field :description %>
+          <%= f.text_area(:description, rows: 4, placeholder: "Intoduce the topic here") %>
         </div>
         <h3>Chunks</h3>
         <div id='chunks'>
